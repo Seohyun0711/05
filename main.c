@@ -2,17 +2,21 @@
 
 int main(void)
 {
-    int num;
+    int num = 0;
+    char c;
 
-    printf("정수 입력: ");
-    scanf("%d", &num);
+    printf("input a string: ");
+    
 
-    if (num < 0)
+    while ((c = getchar()) != '\n')
     {
-        num = -num;
+        if (c >= '0'&& c<= '9')
+        {
+            num++;
+        }
     }
     
-        printf("절대값은 %d 입니다\n", num);
+        printf("the number of digits is %d \n", num);
     
     return 0;
 }
